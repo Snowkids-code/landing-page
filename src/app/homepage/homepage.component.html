@@ -1,0 +1,17 @@
+<app-categories></app-categories>
+<div class="p-8">
+  <h1 class="text-3xl font-bold mb-6 text-gray-800">Products</h1>
+
+  <div *ngIf="loading" class="text-gray-500">Loading products...</div>
+  <div *ngIf="error" class="text-red-600">{{ error }}</div>
+
+  <div
+    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+    *ngIf="!loading && !error"
+  >
+    <app-product-card
+      *ngFor="let product of products"
+      [product]="product"
+    ></app-product-card>
+  </div>
+</div>
