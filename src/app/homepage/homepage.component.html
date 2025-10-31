@@ -1,5 +1,5 @@
-<app-categories></app-categories>
-<div class="p-8">
+<!-- <app-categories></app-categories> -->
+<!-- <div class="p-8">
   <h1 class="text-3xl font-bold mb-6 text-gray-800">Products</h1>
 
   <div *ngIf="loading" class="text-gray-500">Loading products...</div>
@@ -14,4 +14,10 @@
       [product]="product"
     ></app-product-card>
   </div>
+</div> -->
+<div>
+  <h2 class="text-xl font-semibold mt-4">Characters (Page 2, filter: Rick)</h2>
+  <ul class="list-disc ml-6 mt-2">
+    <li *ngFor="let name of characters">{{ name }}</li>
+  </ul>
 </div>
